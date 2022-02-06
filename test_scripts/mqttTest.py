@@ -11,7 +11,7 @@ def on_message_webserver(client, userdata, message):
     if message.topic == "photo":
         photo = message.payload
         name = datetime.now().strftime("%d-%m-%Y %H.%M.%S") + ".png"
-        path = os.path.join("flaskapp/static", "img", name)
+        path = os.path.join("../flaskapp/static", "img", name)
         f = open(path, "wb")
         f.write(photo)
         print("Image Received")
