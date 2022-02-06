@@ -35,7 +35,7 @@ In the `operation` folder:
 $ python3 bird_detection.py
 ```
 if Phillip Hue is unavaible, comment line 61 and 79 (codes for sending request to Hue bridge) in `operation/bird_detection.py`.
-# run the flask app
+### run the flask app
 In the `flaskapp` folder:
 ```shell
 $ python3 app.py
