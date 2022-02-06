@@ -59,7 +59,6 @@ while True:
     print(len(detections))
     if camera_ready == True and len(detections) != 0:
         x = requests.put(url, json=birds_come_data)
-        print(x.text)
 
         name = datetime.now().strftime("%Y-%m-%d %H.%M.%S") + ".png"
 
@@ -83,4 +82,3 @@ while True:
     print(camera_ready)
     # only when detected number changes, let the camera be ready, to avoid the
     # camera keeping taking photos when there's birds.
-    # TODO: turn on the light
