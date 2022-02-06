@@ -25,7 +25,7 @@ width=640
 height=480
 num_threads=4
 enable_edgetpu=False
-model='model4.tflite'
+model='model2.tflite'
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
