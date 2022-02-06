@@ -17,3 +17,26 @@ All programs are running on RPi, everything is in my home network. No cloud serv
 - Python Flask (just to make a simple way to check saved photos)
 - TensorFlow Lite for detecting birds
 - Phillip Hue REST API 
+
+## Run
+### install independencies
+```shell
+$ pip install -r requirements.txt
+```
+### build and run the mqtt broker image
+In the `mqtt` folder:
+```shell
+$ docker build -t birdmqtt .
+$ docker run -p 1883:1883 birdmqtt
+```
+### run the component for hardware operating and deep learning
+In the `operation` folder:
+```shell
+$ python3 bird_detection.py
+```
+if Phillip Hue is unavaible, comment line 61 and 79 (codes for sending request to Hue bridge) in `operation/bird_detection.py`.
+# run the flask app
+In the `flaskapp` folder:
+```shell
+$ python3 app.py
+```
