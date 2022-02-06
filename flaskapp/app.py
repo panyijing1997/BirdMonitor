@@ -24,7 +24,7 @@ def handle_connect(client, userdata, flags, rc):
 @mqtt.on_topic("photo")
 def test1(client, userdata, message):
     photo = message.payload
-    name = datetime.now().strftime("%d-%m-%Y %H.%M.%S") + ".png"
+    name = datetime.now().strftime("%Y-%m-%d %H.%M.%S") + ".png"
     path = os.path.join("static", "img", name)
     f = open(path, "wb")
     f.write(photo)
@@ -36,6 +36,7 @@ def test1(client, userdata, message):
 def showfiles():
     path=os.path.join("static", "img")
     filelist=list(os.listdir(path))
+    filelist.sort(reverse=True)
     template={
         "filelist":filelist
     }

@@ -25,7 +25,7 @@ width=640
 height=480
 num_threads=4
 enable_edgetpu=False
-model='model0.tflite'
+model='model4.tflite'
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
@@ -54,7 +54,7 @@ while True:
     detections = detector.detect(image)
     print(len(detections))
     if camera_ready==True and len(detections)!=0:
-        name= datetime.now().strftime("%d-%m-%Y %H.%M.%S") + ".png"
+        name= datetime.now().strftime("%Y-%m-%d %H.%M.%S") + ".png"
 
         print(name)
         cv2.imwrite(name, image)
