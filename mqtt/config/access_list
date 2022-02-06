@@ -1,0 +1,8 @@
+user webserver
+topic readwrite #
+
+user browser
+topic readwrite #
+
+user camera
+topic readwrite #

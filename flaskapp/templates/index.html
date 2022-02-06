@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose photo </title>
+</head>
+<body>
+    <ul id="filelist">
+    {% for item in filelist %}
+
+        <li>
+            <a href="/{{item}}">
+                {{item}}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>
